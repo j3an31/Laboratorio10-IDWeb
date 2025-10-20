@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto total del elemento */
+  margin: 0; /* Elimina todos los márgenes externos */
+  padding: 0; /* Elimina todos los rellenos internos */
+}
+
+.barraNavegacion {
+    background-color: black;
+    text-align:center;
+    padding: 28px 0;
+    position: sticky; /*Mantiene fija la barra de navegación*/
+    top: 0; /*Cuando el borde superior esté a 0 píxeles de distancia 
+    del borde superior de la ventana de visualización se comporta como fixed*/
+    width: 100%;
+}
+
+.barraNavegacion a {
+    padding: 28px 30px;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.barraNavegacion a:hover {
+    cursor: pointer;
+    background-color: rgb(143, 147, 143);
+    transition: all 0.7s ease;
+}
+
+#presentacion {
+    background-color: rgb(7, 198, 61);
+    padding: 9%;
+    text-align: center;
+}
+
+#presentacion h1{
+    font-size: 35px;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+#presentacion p {
+    font-size: 20px;
+    color: white;
+}

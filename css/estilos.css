@@ -4,6 +4,10 @@
   padding: 0; /* Elimina todos los rellenos internos */
 }
 
+body {
+    background-color: rgb(226, 221, 221);
+}
+
 .barraNavegacion {
     background-color: black;
     text-align:center;
@@ -29,8 +33,8 @@
 }
 
 #presentacion {
-    background-color: rgb(7, 198, 61);
-    padding: 9%;
+    background-color: rgb(7, 67, 98);
+    padding: 12.5%;
     text-align: center;
 }
 
@@ -43,4 +47,129 @@
 #presentacion p {
     font-size: 20px;
     color: white;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-around; 
+    text-align: center;
+}
+
+.cajaContenido {
+    border-radius: 15px;
+    background-color: rgb(243, 238, 238);
+    padding: 30px;
+    flex-wrap: wrap; /* Permite que las cajas bajen si no caben */
+    flex: 1;
+    margin: 16px 10px;
+    transition: transform 0.3s ease; /* La propiedad transform será animada*/
+}
+
+.cajaContenido:hover {
+    background-color: rgb(187, 184, 184);
+    transform: scale(1.05);
+}
+footer {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+/* ----- MEDIA QUERIES ----- */
+/* Para tablets y pantallas medianas */
+@media (max-width: 768px) {
+  .barraNavegacion a {
+    display: block;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  #presentacion h1 {
+    font-size: 28px;
+  }
+
+  .contenido {
+    flex-direction: column; /* Las cajas se apilan verticalmente */
+    align-items: center;
+  }
+
+  .cajaContenido {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+
+/* Para celulares pequeños */
+@media (max-width: 480px) {
+  #presentacion {
+    padding: 40px 10px;
+  }
+
+  #presentacion h1 {
+    font-size: 24px;
+  }
+
+  #presentacion p {
+    font-size: 16px;
+  }
+
+  .barraNavegacion a {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para las demás páginas */
+
+h1, header p {
+    text-align: center;
+}
+
+header h1 {
+    margin: 30px 0 0 0;
+    font-size: 50px;
+}
+
+header p {
+    margin: 15px 0 3% 0;
+}
+
+.contenidoPortafolio {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.contenidoNosotros {
+    display: flex;
+    justify-content: space-around; 
+    text-align: center;
+    width: 70%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Para centrarlo verticalmente en la vista */
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    width: 600px;
+    margin: 20px auto;
+}
+
+.formulario form {
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil (opcional) */
 }

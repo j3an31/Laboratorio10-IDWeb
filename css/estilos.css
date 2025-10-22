@@ -6,6 +6,11 @@
 
 body {
     background-color: rgb(226, 221, 221);
+    width: 90%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column; /* Los elementos (header, main, footer) van uno debajo del otro */
+    margin: 0 auto;
 }
 
 .barraNavegacion {
@@ -127,6 +132,7 @@ body {
     background-color: rgb(187, 184, 184);
     transform: scale(1.05);
 }
+
 footer {
     text-align: center;
     background-color: black;
@@ -214,20 +220,62 @@ header p {
     margin: 30px auto;
 }
 
+/* Estilo para formulario*/
+
 .formulario {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 50vh; /* Para centrarlo verticalmente en la vista */
-    padding: 20px;
-    background-color: whitesmoke;
     border-radius: 15px;
     width: 600px;
-    margin: 20px auto;
+    margin: 0px auto 15px auto;
 }
 
 .formulario form {
     padding: 20px;
     border-radius: 8px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil (opcional) */
+    background-color: #fff; /* Fondo blanco para el formulario */
+    max-width: 400px; /* Ancho máximo para el formulario */
+    margin: auto; /* Centra el formulario horizontalmente */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Estilos para los campos de texto y área de texto (input[type="text"], input[type="email"] y textarea) */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    margin-top: 5px; /* Espacio arriba */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no aumente el ancho total */
+}
+
+/* Estilos al enfocar los campos */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #3498db; /* Borde azul al enfocar */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+/* Estilos para el botón de enviar */
+button[type="submit"] {
+    background-color: #3498db; /* Fondo azul */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Ajuste el padding para un mejor aspecto */
+    border-radius: 4px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%; /* Hace que el botón ocupe todo el ancho */
+    box-sizing: border-box; /* Necesario si se pone width: 100% y padding */
+    font-weight: bold;
+}
+
+/* Efecto hover para el botón */
+button[type="submit"]:hover {
+    background-color: #217dbb; /* Un azul ligeramente más oscuro al pasar el ratón */
 }
